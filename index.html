@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포트폴리오</title>
+  <script src="https://kit.fontawesome.com/5480f16be7.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-simplyscroll/2.1.1/jquery.simplyscroll.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- ✅ 추가된 GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+  <!-- ✅ 반드시 main.js보다 위에 있어야 함 -->
+  <script src="js/main.js"></script>
+  <script src="js/text.js"></script>
+  <!-- Splitting.js -->
+  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+     <section class="intro">
+        <h2 class="intro__title hidden">"Design is not just a visual, but a conversation with the user."</h2>
+        <div class="intro__background intro__background--left"></div>
+        <div class="intro__background intro__background--right"></div>
+    </section> 
+
+  <header class="header">
+    <div class="header__logo">
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div><!-- //.header__logo -->
+    <nav class="header__nav">
+      <a href=".header__nav">HOME</a>
+      <a href=".about">ABOUT</a>
+      <a href=".portfolio_con">PORTFOLIO</a>
+      <a href=".contact_con">CONTACT</a>
+    </nav><!-- //.header__nav -->
+  </header>
+  <section class="hero">
+    <img src="./img/main.png">
+  </section><!-- //.hero -->
+  <section class="about">
+    <div class="about__title">
+      <span class="about__text">
+        <span>A</span><span>B</span><span>O</span><span>U</span><span>T</span>
+      </span><!-- //.about__text -->
+      <svg class="line-svg right" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.43074 70.2266C-2.82847 69.5779 1.09068 25.4406 15.7294 23.4661C23.8753 22.3673 32.9176 21.5975 38.0529 27.8315C41.4084 31.9049 41.7873 40.1349 41.7873 45.2932C41.7873 49.0806 31.0516 48.5939 28.3434 47.2241C22.6773 44.3581 22.3684 35.0447 22.3684 29.7624C22.3684 5.53588 47.0051 2.22656 65.6875 2.22656" fill="none" stroke="#fff" stroke-width="2" />
+      </svg>
+      <img src="./img/me2.png" alt="프로필 이미지" class="about__image" /> <svg class="line-svg left" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M65.7174 2.22656C63.193 2.85949 62.4432 16.1426 62.4055 18.2187C62.2456 27.0398 59.0936 35.5837 59.0936 44.2982C59.0936 48.4018 56.1299 54.7033 58.235 58.6911C60.4093 62.8099 66.2092 57.5818 67.312 55.3696C72.5715 44.8203 61.6132 44.2982 53.5738 44.2982C36.0892 44.2982 19.2133 48.7267 1.6875 48.7267" fill="none" stroke="#fff" stroke-width="2" />
+      </svg>
+      <span class="about__text">
+        <span>M</span><span>E</span>
+      </span><!-- //.about__text -->
+    </div><!-- //.about__title -->
+  </section><!-- //.about -->
+  <div class="about__content">
+    <div class="about-left">
+      <!-- <h2 class="quote">“</h2> -->
+      <b class="quote">“</b>
+      <h2 class="name"> 윤채원 <span class="name_e">Yun chae won</span></h2>
+      <h2 class="quote_right">”</h2>
+
+      <p class="birth">1996.03.18</p>
+      <p class="about-text">
+        제 이름을 뜻하는 것처럼 채(빛날 채彩) 더 밝게 빛나는 디자인을 만들어<br>
+        원(도울 원援) 누구나 쉽게 접근하고 편리하게 사용할 수 있도록 사람을 돕는 <strong>UIUX 디자인</strong> 입니다.
+      </p><!-- //.about-text -->
+    </div><!-- //.about-left -->
+    <div class="about-right">
+      <div class="text_box">
+        <h3 class="subtitle">자격증</h3>
+        <ul class="cert-list">
+          <li>GTQi 1급</li>
+          <li>GTQ 1급</li>
+          <li>ITQ 한글 엑셀</li>
+          <li>컬러리스트 산업기사</li>
+          <li>전산회계 1급</li>
+          <li>FAT 1급</li>
+          <li>운전면허 2종</li>
+          <li>제과기능사</li>
+          <li>제빵기능사</li>
+        </ul><!-- //.cert-list -->
+      </div><!-- //.text_box -->
+      <div class="ani">
+        <h3 class="subtitle">SKILLS</h3>
+        <div class="ani_box">
+          <div class="splatted"
+            style="--hue: 110; --hover-rotate: -10; --active-rotate: -30; --hover-scale: 1.15; --active-scale: 0.75;">
+            <div class="splatted__image"><img src="./img/ai_img.png" /><img src="./img/ai_hover.png" /><img
+                src="./img/ai_hover.png" /></div>
+          </div><!-- //.splatted -->
+          <div class="splatted"
+            style="--hue: 10; --hover-rotate: -5; --active-rotate: 10; --hover-scale: 1.2; --active-scale: 0.85;">
+            <div class="splatted__image"><img src="./img/ps_img.png" /><img src="./img/ps_hover.png" /><img
+                src="./img/ps_hover.png" /></div>
+          </div><!-- //.splatted -->
+          <div class="splatted"
+            style="--hue: 210; --hover-rotate: 10; --active-rotate: 25; --hover-scale: 1.1; --active-scale: 0.8;">
+            <div class="splatted__image"><img src="./img/fi_img.png" /><img src="./img/fi_hover.png" /><img
+                src="./img/fi_hover.png" /></div>
+          </div><!-- //.splatted -->
+          <div class="splatted"
+            style="--hue: 10; --hover-rotate: -5; --active-rotate: 10; --hover-scale: 1.2; --active-scale: 0.85;">
+            <div class="splatted__image"><img src="./img/vi_img.png" /><img src="./img/vi_hover.png" /><img
+                src="./img/vi_hover.png" /></div>
+          </div><!-- //.splatted -->
+        </div><!-- //.ani_box -->
+
+      </div><!-- //.ani -->
+    </div><!-- //.about-right -->
+  </div><!-- //.about__content -->
+  <!--   <img class="bg" src="./img/con_star.png" alt="star"> -->
+  <section class="portfolio_con">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="big-text" id="bigText1">fixed web design</div>
+          <a href="https://www.figma.com/proto/7ElYz0cJ1uYRdzHpIjfJCG/%EC%9C%A4%EC%B1%84%EC%9B%90?node-id=776-158&t=B2ix1ZXOw9ClQn9B-1&scaling=min-zoom&content-scaling=fixed&page-id=277%3A309"><img src="img/img.png" alt=""></a>
+          <svg id="text-container" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
+            <path id="text-curve" d="M0 100s269.931 86.612 520 0c250.069-86.612 480 0 480 0" fill="none"/>
+            
+            <text y="40" font-size="32">
+              <textPath id="text-path" href="#text-curve" startOffset="200">
+                * Keyframers really know animation.
+              </textPath>
+            </text>
+          </svg>
+          </svg>
+          <div class="box1"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="big-text" id="bigText2">CATEGORY TWO</div>
+          <svg viewBox="0 0 1000 200">
+            <path id="curve2" fill="none" stroke="transparent" stroke-width="1"
+              d="M0,100 S269.931,186.612,520,100 C770.069,13.388,1000,100,1000,100" />
+            <text>
+              <textPath id="smallText2" href="#curve2" startOffset="0%">
+                Another flowing text along the curve...
+              </textPath>
+            </text>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="con1">
+    <!--   <div class="swiper_slide">
+      <h3 class="text">fixed web design</h3></div>
+      <p>Portfo web design. Portfo web design. Portfo web design. </p>
+       -->
+    </div><!-- //.con1 -->
+    <!-- <div class="con2">
+      <h3>Responsive web design</h3>
+      <p>Portfo web design. Portfo web design. Portfo web design. </p>
+      <div class="box2"></div> -->
+    </div><!-- //.con2 -->
+   <!--  <div class="con3">
+      <h3>team project1</h3>
+      <p>Portfo web design. Portfo web design. Portfo web design. </p>
+      <div class="box3"></div> -->
+    </div><!-- //.con3 -->
+  </section><!-- //.portfolio_con -->
+  <section class="tab" >
+    <ul class="b_tab">
+    <li>
+  <a href="./cosmetic/index.html" class="slide-vertical" id="txt1" data-splitting  >CODMETIC</a><img class="ar1" src="img/arrow.png" alt="arrow">
+  
+</li> 
+<li>
+  <a href="./company/index.html" class="slide-vertical" data-splitting  >COMPANY</a>
+  <img class="ar1" src="img/arrow.png" alt="arrow">
+ 
+</li>   <li>
+  <a href=".portfolio_con" class="slide-vertical" data-splitting >PORTFOLIO</a><img class="ar1" src="img/arrow.png" alt="arrow">
+</li>
+    </ul><!-- //.b_tab -->
+    <div class="b_tab_img">
+      <div class="img_ims1">
+        <img src="img/cosmetic_img.png" alt="">
+      </div>
+      <div class="img_ims2">
+        <img src="img/conpany_img.png" alt="">
+      </div>
+      <div class="img_ims3">
+        <img src="img/por_img.png" alt="">
+      </div>
+    </div>
+   
+    <div class="txtAniBox">
+      <div class="txtAniWrapper txt1">
+        <ul class="txtAni1">
+          <li>Designing with purpose, crafting with passion</li>
+          <li> - - - </li>
+          <li> Designing with purpose, crafting with passion </li>
+        </ul><!-- //.txtAni1 -->
+      </div>
+      <div class="txtAniWrapper txt2">
+        <ul class="txtAni2">
+          <li>Where creativity meets functionality</li>
+          <li> - - -</li>
+          <li>Where creativity meets functionality</li>
+        </ul><!-- //.txtAni2 -->
+      </div>
+    </div><!-- //.txtAniBox -->
+  </section><!-- //.tab -->
+  <!-- <section class="tab2">
+    <ul class="heading">
+      <li data-splitting class="word">CODMETIC</li>
+      <li data-splitting class="word">CODMETIC2</li>
+      <li data-splitting class="word">CODMETIC3</li>
+    </ul>
+  </section> -->
+  <section class="contact_con">
+    <div class="con_img">
+      <img src="./img/con_img.png" alt="">
+    </div><!-- //.con_img -->
+    <div class="txt_boxs">
+      <h2>EDITOR`s NOTE</h2>
+      <div class="sub_box">
+        <div class="txt">
+          <h3>CONTACT</h3>
+          <div class="text-wrapper">
+            Chaewon Yun
+            <svg class="animated-path" viewBox="0 0 98 94" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.63281 92.3612C9.44565 86.6791 24.0678 87.3866 33.3554 83.6028C43.332 79.5382 56.2987 75.1075 65.1847 69.1834C75.5036 62.3042 93.28 49.2397 95.7324 35.7519C101.039 6.5654 63.1947 2 42.4342 2C28.0106 2 17.836 6.86918 8.36184 18.4487C4.79168 22.8122 2.53202 43.3464 6.43926 48.0351C26.5868 72.2122 63.4679 71.2128 91.994 71.2128"/>
+            </svg>
+          </div>
+          <div class="about_txt">
+            <p>chaewon-portfolio.com</p>
+            <p>dbstnal356@naver.com</p>
+          </div>
+        </div>
+      </div><!-- //. sub_box-->
+
+    </div><!-- //.txt_boxs -->
+
+  </section><!-- //.contact_con -->
+ 
+  <section class="section7 hero" data-scroll-section>
+    <div class="typing_wrapper">
+        <span class="typing_txt"></span>
+        <span class="cursor">|</span>
+    </div><!-- //.typing_wrapper -->
+</section><!-- //.section7 -->
+</body>
+
+</html>
