@@ -518,9 +518,9 @@ h3.subtitle {
 
 
 .portfolio_con{
-  background:#2C2727;
+  background:#200404;
   width: 100%;
-  height: 1200px;
+  height: 1300px;
   color: #fff;
 font-family: 'Calibri';
 }
@@ -534,48 +534,28 @@ font-family: 'Calibri';
   z-index: 2;
   
 }
-.swiper {
-  width: 100%;
-  height: 100vh;
-}
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+#con5 {
+ 
   position: relative;
 }
-.box1{
-/*   width: 863px;
-height: 560px;
-background: #42180D; */
+#con5 article{
+  justify-self: center;
+
+  width: 200vh; height: 40vh;
+  margin-top: 70px;
+  background: #000;
+}
+#con5 article.one{
+  background: url(../img/cama.png);
+}
+#con5 article.two{
+  background: url(../img/ice.png);
+}
+#con5 article.three{
+  background: url(../img/tem.png);
 }
 
-.portfolio_con .con1{
-  color: #FFF;
-font-family: 'Calibri';
-letter-spacing: 1px;
-}
-.portfolio_con .con1 h3{
-  font-weight: 700;
-  font-size: 90px;
-}
-.portfolio_con .con1 p{
-  font-size: 40px;
-}
-.portfolio_con .con2 h3{
-  font-weight: 700;
-  font-size: 90px;
-}
-.portfolio_con .con2 p{
-  font-size: 40px;
-}
-.portfolio_con .con3 h3{
-  font-weight: 700;
-  font-size: 90px;
-}
-.portfolio_con .con3 p{
-  font-size: 40px;
-}
 
 
 

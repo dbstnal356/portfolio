@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // 인트로 
     const animationOptions = {
         ease: 'expo.inOut'
     };
@@ -222,91 +223,7 @@ $(function () {
 
 
 
-  gsap.registerPlugin(MotionPathPlugin);
-
-const swiper = new Swiper('.swiper', {
-  direction: 'horizontal',
-  slidesPerView: 1,
-  spaceBetween: 10,
-  on: {
-    slideChangeTransitionStart: function() {
-      const activeIndex = swiper.activeIndex;
-
-      const bigText = document.getElementById('bigText' + (activeIndex + 1));
-      const smallText = document.getElementById('smallText' + (activeIndex + 1));
-
-      if (bigText) {
-        gsap.to(bigText, {
-          y: -20,
-          duration: 0.8,
-          ease: "sine.inOut",
-          yoyo: true,
-          repeat: 1
-        });
-      }
-
-      if (smallText) {
-        gsap.to(smallText, {
-          attr: { startOffset: "100%" },
-          duration: 8,
-          repeat: -1,
-          ease: "linear"
-        });
-      }
-    }
-  }
-});
-
-// 초기 슬라이드용
-window.addEventListener('load', () => {
-  gsap.to('#bigText1', {
-    y: -20,
-    rotation: -7, 
-    duration: 0.8,
-    ease: "sine.inOut",
-    yoyo: true,
-    repeat: -1
-  });
-  gsap.to('#smallText1', {
-    attr: { startOffset: "100%" },
-    duration: 8,
-    repeat: -1,
-    ease: "linear"
-  });
-});
-
-
-
-
-// ddjas
-console.clear();
-
-var textPath = document.querySelector('#text-path');
-
-var textContainer = document.querySelector('#text-container');
-
-var path = document.querySelector( textPath.getAttribute('href') );
-
-var pathLength = path.getTotalLength();
-console.log(pathLength);
-
-function updateTextPathOffset(offset){
-  textPath.setAttribute('startOffset', offset); 
-}
-
-updateTextPathOffset(pathLength);
-
-function onScroll(){
-  requestAnimationFrame(function(){
-    var rect = textContainer.getBoundingClientRect();
-    var scrollPercent = rect.y / window.innerHeight;
-    console.log(scrollPercent);
-    updateTextPathOffset( scrollPercent * 2 * pathLength );
-  });
-}
-
-window.addEventListener('scroll',onScroll);
-
+  
 
 
 
@@ -419,7 +336,39 @@ window.addEventListener('scroll',onScroll);
    
    animate();
    
+
+
+   //con5 포트폴리오 효과과
+   let con5Article = gsap.utils.toArray('.articles article');
+   con5Article.forEach((el, i) => {
+       gsap.timeline({
+           scrollTrigger: {
+               trigger: el,
+               start: 'top bottom', //화면 아래쪽에서 시작
+               end: 'top 20%',  //화면 위쪽으로 거의다 올라왔을때 끝
+               scrub: 0.5 //스크롤에 따라 부드럽게 반응
+           }
+       }).fromTo(
+           el, { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1 }, 0 //타임라인 시작 위치
+       )
+   })
+
  
+
+
+ ///글씨 효과 about me 쪽쪽
+   gsap.registerPlugin(ScrollTrigger);
+
+   gsap.from(".name", {
+     scrollTrigger: {
+       trigger: ".name",
+       start: "top 80%", // 화면 상단에서 80% 지점에 왔을 때 시작
+       toggleActions: "play none none none",
+     },
+     y: 100,    // 아래에서 위로 올라오게
+     opacity: 0,
+     duration: 1
+   });
 });
 
 
