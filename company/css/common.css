@@ -462,6 +462,7 @@ section.txt_area h2 .tit {
     letter-spacing: 2vw;
 }
 .sticky_title .list{
+    color: #59492a;
     display: flex;
     width: 100%;
     z-index: 5;
